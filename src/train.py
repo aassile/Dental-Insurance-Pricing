@@ -14,6 +14,7 @@ model = xgb.XGBRegressor(n_estimators=500,
                          random_state=42,
                          objective='reg:squarederror',
                          early_stopping_rounds=50,
+                         enable_categorical=True,
                          eval_metric='rmse')
 
 model.fit(X_train, y_train,

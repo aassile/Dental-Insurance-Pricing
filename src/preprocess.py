@@ -10,8 +10,10 @@ def load_and_preprocess():
     df['is_smoker'] = (df['smoker'] == 'yes').astype(int)
     df['high_risk'] = ((df['smoker'] == 'yes') & (df['bmi'] > 30)).astype(int)
     
-    df = pd.get_dummies(df, drop_first=True)
-    
+    df = df.rename(columns={'smoker': 'is_smoker'})
+
+    df = pd.get_dummies(df, columns=['sex', 'region', 'bmi_category', 'age_group'], drop_first=True)
+       
     X = df.drop('charges', axis=1)
     y = df['charges']
     
