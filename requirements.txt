@@ -6,4 +6,4 @@ shap
 streamlit
 matplotlib
 seaborn
-plotly
+joblib
