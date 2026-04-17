@@ -38,6 +38,8 @@ Enter member characteristics and see:
 | Hyperparameter tuning | Optuna (Bayesian optimization) |
 | Explainability | SHAP (global + local) |
 
+![SHAP Summary Plot](src/shap_summary.png)
+
 ---
 
 ## Feature Engineering
